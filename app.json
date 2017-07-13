@@ -1,0 +1,20 @@
+{
+  "title": "marmitas.top",
+  "urls": {
+    "main": "http://localhost:3000",
+    "assets": "{{ urls.main }}/assets"
+  },
+  "marmitas": [
+    {
+      "price": "10,00",
+      "address": "Ipanema. Barão da Torre com a Av. Henrique Dumont",
+      "coords": "-22.982628, -43.213194",
+      "name": "Simone"
+    }
+  ],
+  "environments": {
+    "dev": {},
+    "staging": {},
+    "production": {}
+  }
+}

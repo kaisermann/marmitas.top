@@ -1,0 +1,43 @@
+rolleiflex.baseFontSize       = app.baseFontSize
+rolleiflex.autoBorderBox      = false
+rolleiflex.use.em             = false
+rolleiflex.breakpoints = {
+	"xs": {
+		"triggerAt": 0
+		"container": 100%
+	}
+	
+	"sm": {
+		"triggerAt": 768px
+		"container": 740px
+	}
+	
+	"md": {
+		"triggerAt": 992px
+		"container": 960px
+	}
+	
+	"lg": {
+		"triggerAt": 1201px
+		"container": app.siteWidth
+	}
+}
+
+_bps = rolleiflex.breakpoints
+_generateRuptureBpsList()
+	list = ()
+	for scaleName, scaleOpts in _bps
+		push(list, max(scaleOpts.triggerAt - 1, 0))
+	return list
+	
+rupture = merge(rupture, {
+	"base-font-size":          app.baseFontSize
+	"scale":                   _generateRuptureBpsList()
+	"scale-names":             keys(_bps)
+	"anti-overlap":            true
+	"enable-em-breakpoints":   rolleiflex.use.em
+	"mobile-cutoff":           _bps.sm.triggerAt - 1
+	"tablet-cutoff":           _bps.md.triggerAt - 1
+	"desktop-cutoff":          _bps.md.triggerAt - 1
+	"hd-cutoff":               _bps.lg.triggerAt - 1
+})

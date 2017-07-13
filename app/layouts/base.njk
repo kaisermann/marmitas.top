@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <head>{% include "partials/head.njk" %}</head>
+  <body>
+    {% include "partials/header.njk" %}
+    {% block content %}{% endblock %}
+    {% include "partials/footer.njk" %}
+    <script type="text/javascript" src="{{ asset('scripts/main.js') }}"></script>
+  </body>
+</html>

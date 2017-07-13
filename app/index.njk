@@ -1,0 +1,18 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <h1>marmitas.top</h1>
+  <ul>
+    {% for marmita in app.marmitas %}
+      <li>R$
+        {{ marmita.price }}
+        -
+        {{ marmita.name }}
+        -
+        <a target="_blank" rel="noopener" href="https://www.google.com.br/maps/search/{{ marmita.coords | urlencode }}/">
+          {{ marmita.address }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
