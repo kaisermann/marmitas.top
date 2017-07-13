@@ -1,20 +1,29 @@
 {
   "title": "marmitas.top",
   "urls": {
-    "main": "http://localhost:3000",
+    "main": "http://localhost:3002",
     "assets": "{{ urls.main }}/assets"
   },
-  "marmitas": [
-    {
-      "price": "10,00",
-      "address": "Ipanema. Barão da Torre com a Av. Henrique Dumont",
-      "coords": "-22.982628, -43.213194",
-      "name": "Simone"
-    }
-  ],
-  "environments": {
-    "dev": {},
-    "staging": {},
-    "production": {}
+  "cities": {
+    "RJ": "Rio de Janeiro",
+    "SP": "São Paulo"
+  },
+  "marmitas": {
+    "RJ": [
+      {
+        "name": "Simone",
+        "price": "R$10,00",
+        "address": "Rua Barão da Torre com Av. Henrique Dumont - Ipanema",
+        "coords": "-22.982628,-43.213194",
+        "description": "Guaraplus + marmita (filé de frango, carne assada, lasanha, etc). A Simone é 🔝"
+      },
+      {
+        "name": "Sopas e Caldos",
+        "price": "R$13,00 - R$16,00",
+        "address": "Rua Professor Alfredo Gomes com Rua Muniz Barreto - Botafogo",
+        "coords": "-22.9748162,-43.2354375",
+        "description": "Tamanhos P, M e G. Sopas e Caldos é 🔝"
+      }
+    ]
   }
 }

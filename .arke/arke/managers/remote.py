@@ -343,7 +343,7 @@ class RemoteManager(ManagerBoilerplate):
       sudo('chown -RfHh %s:%s %s' %
            (arke.Core.getEnvOption('webServerUser'), arke.Core.getEnvOption('webServerGroup'), folderPath))
       with cd(folderPath):
-        sudo('find . -type d -print0 | xargs -0 chmod 0755')
+        sudo('find . -type d -print0 | xargs -0 chmod 0775')
         sudo('find . -type f -print0 | xargs -0 chmod 0664')
     print green('>> Done fixing permissions')
 

@@ -5,9 +5,10 @@ function parseAppData () {
   const iterateObjProps = (obj, cb) => {
     for (const key in obj) {
       if (obj.hasOwnProperty(key)) {
-        obj[key] = typeof obj[key] === 'object'
-          ? iterateObjProps(obj[key], cb)
-          : cb(key, obj[key])
+        obj[key] =
+          typeof obj[key] === 'object'
+            ? iterateObjProps(obj[key], cb)
+            : cb(key, obj[key])
       }
     }
     return obj
@@ -34,8 +35,10 @@ function parseAppData () {
   // append its variables to the 'app' object.
   appData = Object.assign(
     appData,
-    appData.environments[process.env.NODE_ENV]
+    appData.environments
       ? appData.environments[process.env.NODE_ENV]
+        ? appData.environments[process.env.NODE_ENV]
+        : {}
       : {}
   )
   delete appData.environments
