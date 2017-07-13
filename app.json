@@ -18,11 +18,18 @@
         "description": "Guaraplus + marmita (filé de frango, carne assada, lasanha, etc). A Simone é 🔝"
       },
       {
+        "name": "Não tem nome mas é de chineses",
+        "price": "R$15,00",
+        "address": "Rua Santa Clara (altura do Nº 118) com Rua Barata Ribeiro - Copacabana",
+        "coords": "-22.970239,-43.188143",
+        "description": "\"vem uma refeição que me alimentou por 48h (sério).\" - Douglas. Chineses são 🔝"
+      },
+      {
         "name": "Sopas e Caldos",
-        "price": "R$13,00 - R$16,00",
+        "price": "R$13,00 (P), R$15,00 (M) R$20,00 (G)",
         "address": "Rua Professor Alfredo Gomes com Rua Muniz Barreto - Botafogo",
         "coords": "-22.9748162,-43.2354375",
-        "description": "Tamanhos P, M e G. Sopas e Caldos é 🔝"
+        "description": "Tamanhos P (já alimenta bem), M e G. Costuma ter 4 opções por dia. De dia tem quentinha, de noite tem sopinha e salgadinhos. Sopas e Caldos é 🔝"
       }
     ]
   },

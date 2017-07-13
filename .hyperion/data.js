@@ -68,7 +68,6 @@ function parseAppData () {
     return obj
   }
   appData = iterateObjProps(appData, parsePropStr)
-  console.log(appData)
 
   return appData
 }
