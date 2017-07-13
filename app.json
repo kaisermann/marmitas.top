@@ -25,5 +25,12 @@
         "description": "Tamanhos P, M e G. Sopas e Caldos é 🔝"
       }
     ]
+  },
+  "environments": {
+    "production": {
+      "urls": {
+        "main": "http://marmitas.top"
+      }
+    }
   }
 }

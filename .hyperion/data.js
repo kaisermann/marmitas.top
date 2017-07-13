@@ -1,19 +1,30 @@
 const fs = require('fs')
 
-function parseAppData () {
-  // Walks through all of an objects properties
-  const iterateObjProps = (obj, cb) => {
-    for (const key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        obj[key] =
-          typeof obj[key] === 'object'
-            ? iterateObjProps(obj[key], cb)
-            : cb(key, obj[key])
+const isObject = o => o && o.constructor === Object
+
+function mergeDeep (target, ...sources) {
+  if (!sources.length) {
+    return target
+  }
+  const source = sources.shift()
+
+  if (isObject(target) && isObject(source)) {
+    for (const key in source) {
+      if (isObject(source[key])) {
+        if (!target[key]) {
+          target = Object.assign(target, { [key]: {} })
+        }
+        mergeDeep(target[key], source[key])
+      } else {
+        target = Object.assign(target, { [key]: source[key] })
       }
     }
-    return obj
   }
 
+  return mergeDeep(target, ...sources)
+}
+
+function parseAppData () {
   // Reads a string like "{{prop1.prop2.prop3...}}" and returns the actual
   // value of 'object['prop1']['prop2']['prop3']...'
   const parsePropStr = (key, val) => {
@@ -33,7 +44,7 @@ function parseAppData () {
 
   // If NODE_ENV is set and inside the 'app.json[environments]',
   // append its variables to the 'app' object.
-  appData = Object.assign(
+  appData = mergeDeep(
     appData,
     appData.environments
       ? appData.environments[process.env.NODE_ENV]
@@ -44,8 +55,20 @@ function parseAppData () {
   delete appData.environments
 
   // Iterate through the object and transform all
-  // {{keyerty.etc.etc2.etc3...}} into actual properties
-  iterateObjProps(appData, parsePropStr)
+  // {{property.etc.etc2.etc3...}} into actual properties
+  const iterateObjProps = (obj, cb) => {
+    for (const key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        obj[key] =
+          typeof obj[key] === 'object'
+            ? iterateObjProps(obj[key], cb)
+            : cb(key, obj[key])
+      }
+    }
+    return obj
+  }
+  appData = iterateObjProps(appData, parsePropStr)
+  console.log(appData)
 
   return appData
 }
