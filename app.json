@@ -1,7 +1,7 @@
 {
   "title": "marmitas.top",
   "urls": {
-    "main": "http://localhost:3002",
+    "main": "http://localhost:3000",
     "assets": "{{ urls.main }}/assets"
   },
   "cities": {
@@ -15,6 +15,7 @@
         "price": "R$10,00",
         "address": "Rua Barão da Torre com Av. Henrique Dumont - Ipanema",
         "coords": "-22.982628,-43.213194",
+        "workingHours": "11:30 ~ 13:00",
         "description": "Guaraplus + marmita (filé de frango, carne assada, lasanha, etc). A Simone é 🔝"
       },
       {
