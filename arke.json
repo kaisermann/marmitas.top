@@ -3,37 +3,21 @@
     "repo": "git@github.com:kaisermann/000-marmitas-top.git",
     "type": "html",
     "fileStructure": {
-      "shared": [
-        [
-          "robots.txt"
-        ]
-      ]
+      "shared": [["robots.txt"]]
     },
     "cmds": {
-      "install": [
-        [
-          "",
-          "yarn"
-        ]
-      ],
+      "install": [["", "yarn"]],
+      "beforeDeploy": [["", "yarn build:production"]],
       "afterDeploy": [
-        [
-          "",
-          "rm -rf fabfile.py arke.json .arke readme.md .editorconfig"
-        ],
-        [
-          "",
-          "shopt -s dotglob; mv build/* .; rm -rf build; shopt -u dotglob"
-        ]
+        ["", "rm -rf fabfile.py arke.json .arke readme.md .editorconfig"],
+        ["", "shopt -s dotglob; mv build/* .; rm -rf build; shopt -u dotglob"]
       ]
     },
     "maxReleases": 5
   },
   "hosts": {
     "staging": {
-      "hosts": [
-        "tuut-dev"
-      ],
+      "hosts": ["tuut-dev"],
       "name": "marmitas.top",
       "projectDir": "/var/www",
       "projectPublicDir": "htdocs",
@@ -42,12 +26,8 @@
       "webServerUser": "www-data",
       "webServerGroup": "www-data",
       "services": {
-        "toRestart": [
-          "php5.6-fpm"
-        ],
-        "toReload": [
-          "nginx"
-        ]
+        "toRestart": ["php5.6-fpm"],
+        "toReload": ["nginx"]
       }
     }
   }

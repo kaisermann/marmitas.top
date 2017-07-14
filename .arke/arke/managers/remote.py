@@ -207,6 +207,14 @@ class RemoteManager(ManagerBoilerplate):
 
       print yellow('\n>> Beginning deployment')
 
+      print yellow('\n>> Running before-deploy commands')
+      with hide('running'):
+        runCommandList(arke.Core.options['project']['cmds']['beforeDeploy'],
+                       arke.Core.paths['base'],
+                       True,
+                       True)
+      print green('>> Done running before-deploy commands')
+
       if(deployMode == 'git'):
         release_name='%s' % strftime('%Y-%m-%d_%H-%M-%S')
         print yellow('\n>> Creating new release')
