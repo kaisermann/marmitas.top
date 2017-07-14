@@ -31,6 +31,14 @@
         "address": "Rua Professor Alfredo Gomes com Rua Muniz Barreto - Botafogo",
         "coords": "-22.9748162,-43.2354375",
         "description": "Tamanhos P (já alimenta bem), M e G. Costuma ter 4 opções por dia. De dia tem quentinha, de noite tem sopinha e salgadinhos. Sopas e Caldos é 🔝"
+      },
+      {
+        "name": "Carioca",
+        "price": "R$14,00",
+        "address": "Rua Marquês de Abrantes - Flamengo",
+        "coords": "-22.937150, -43.177554",
+        "workingHours": "11:00 ~ 16:00",
+        "description": "Carne / Frango / Peixe. Comida boa, vem bastante coisa, entrega perto é grátis, mais 2 reais mandam um guaravita :)"
       }
     ]
   },
