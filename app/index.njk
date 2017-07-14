@@ -9,7 +9,11 @@
       <ul>
         {% for marmita in marmitas %}
           <li>
-            {{ card.template(marmita) }}
+            <div class="row">
+              <div class="col -size-8@sm">
+                {{ card.template(marmita) }}
+              </div>
+            </div>
           </li>
           <br>
           <br>

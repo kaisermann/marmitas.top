@@ -1,7 +1,7 @@
 {
   "title": "marmitas.top",
   "urls": {
-    "main": "http://localhost:3000",
+    "main": "http://localhost:3002",
     "assets": "{{ urls.main }}/assets"
   },
   "cities": {
@@ -41,10 +41,10 @@
       },
       {
         "name": "Natural e Sabor",
-        "price": "R$13,00 (Pizza + Açaí) / R$18,00 (PF)",
+        "price": "R$13,00",
         "address": "Praia de Botafogo altura do Itaú Cinemas - Botafogo",
         "coords": "-22.944941,-43.182555",
-        "description": "A promoção da pizza com açaí 400ml não é marmita, mas alimenta muito. O PF é frango/bife, batata frita, salada, arroz ocorre, nada acontece feijoada. Natural e Sabor é 🔝"
+        "description": "A promoção da pizza com açaí 400ml não é marmita, mas alimenta muito. Natural e Sabor é 🔝"
       },
       {
         "name": "Carioca",
