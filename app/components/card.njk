@@ -1,0 +1,16 @@
+{% macro template (marmita) %}
+  <h4>{{ marmita.name }}</h4>
+  <strong>Preço</strong>: {{ marmita.price }}
+  <br>
+  <strong>Endereço</strong>: <a target="_blank" rel="noopener" href="https://www.google.com.br/maps/search/{{ marmita.coords | urlencode }}/">{{ marmita.address }}</a>
+  <br>
+  {% if marmita.workingHours %}
+    <strong>Horário</strong>: {{ marmita.workingHours }}
+    <br>
+  {% endif %}
+  <span>
+    <strong>Descrição</strong>:
+    <br>
+    {{ marmita.description }}
+  </span>
+{% endmacro %}

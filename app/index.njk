@@ -1,28 +1,15 @@
 {% extends "layouts/base.njk" %}
+{% import "components/card.njk" as card %}
 
 {% block content %}
   <div class="container">
-    <h1>marmitas.top</h1>
     {% for city, marmitas in app.marmitas %}
       <h3>{{ app.cities[city] }}</h3>
       <br>
       <ul>
         {% for marmita in marmitas %}
           <li>
-            <h4>{{ marmita.name }}</h4>
-            <strong>Preço</strong>: {{ marmita.price }}
-            <br>
-            <strong>Endereço</strong>: <a target="_blank" rel="noopener" href="https://www.google.com.br/maps/search/{{ marmita.coords | urlencode }}/">{{ marmita.address }}</a>
-            <br>
-            {% if marmita.workingHours %}
-              <strong>Horário</strong>: {{ marmita.workingHours }}
-              <br>
-            {% endif %}
-            <span>
-              <strong>Descrição</strong>:
-              <br>
-              {{ marmita.description }}
-            </span>
+            {{ card.template(marmita) }}
           </li>
           <br>
           <br>
