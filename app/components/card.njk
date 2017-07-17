@@ -2,8 +2,23 @@
   <h4>{{ marmita.name }}</h4>
   <strong>Preço</strong>: {{ marmita.price }}
   <br>
-  <strong>Endereço</strong>: <a target="_blank" rel="noopener" href="https://www.google.com.br/maps/search/{{ marmita.coords | urlencode }}/">{{ marmita.address }}</a>
+  <strong>Endereço</strong>:
+  {% if marmita.coords %}
+    <a target="_blank" rel="noopener" href="https://www.google.com.br/maps/search/{{ marmita.coords | urlencode }}/">{{ marmita.address }}</a>
+  {% else %}
+    {{ marmita.address }}
+  {% endif %}
   <br>
+  {% if marmita.telephones %}
+    <strong>Telefone(s)</strong>:
+    {% for telNumber in marmita.telephones %}
+      <a href="tel:{{ telNumber }}">{{ telNumber }}</a>
+      {% if not loop.last %}
+        /
+      {% endif %}
+    {% endfor %}
+    <br>
+  {% endif %}
   {% if marmita.workingHours %}
     <strong>Horário</strong>: {{ marmita.workingHours }}
     <br>

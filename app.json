@@ -1,7 +1,7 @@
 {
   "title": "marmitas.top",
   "urls": {
-    "main": "http://localhost:3002",
+    "main": "http://localhost:3000",
     "assets": "{{ urls.main }}/assets"
   },
   "cities": {
@@ -19,11 +19,25 @@
         "description": "Guaraplus + marmita (filé de frango, carne assada, lasanha, etc). A Simone é 🔝"
       },
       {
+        "name": "Muito Bão",
+        "price": "R$12,00 (P) R$12,50 (M) R$13,00 (G) ",
+        "address": "Delivery - Centro",
+        "telephones": ["(21) 2215-8237", "(21) 2502-0993"],
+        "description": "Delivery com 5 PFs diferente todo dia. Tem até prato diet. Muito Bão é 🔝"
+      },
+      {
         "name": "Não tem nome mas é de chineses",
         "price": "R$15,00",
         "address": "Rua Santa Clara (altura do Nº 118) com Rua Barata Ribeiro - Copacabana",
         "coords": "-22.970239,-43.188143",
         "description": "\"vem uma refeição que me alimentou por 48h (sério).\" - Douglas. Chineses são 🔝"
+      },
+      {
+        "name": "Birds Sucos",
+        "price": "R$14,00",
+        "address": "Praia de Botafogo, 214 - Botafogo",
+        "coords": "-22.942238,-43.179463",
+        "description": "PFzeira completo e variado. Birds Sucos são 🔝"
       },
       {
         "name": "Chineses ao lado do Bigbi",
@@ -50,7 +64,7 @@
         "name": "Carioca",
         "price": "R$14,00",
         "address": "Rua Marquês de Abrantes - Flamengo",
-        "coords": "-22.937150, -43.177554",
+        "coords": "-22.937150,-43.177554",
         "workingHours": "11:00 ~ 16:00",
         "description": "Carne / Frango / Peixe. Comida boa, vem bastante coisa, entrega perto é grátis, mais 2 reais mandam um guaravita :) O Carioca é 🔝"
       }
@@ -59,7 +73,7 @@
   "environments": {
     "production": {
       "urls": {
-        "main": "http://marmitas.top"
+        "main": "https://marmitas.top"
       }
     }
   }
