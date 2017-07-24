@@ -4,21 +4,20 @@
 {% block content %}
   <div class="container">
     {% for city, marmitas in app.marmitas %}
-      <h3>{{ app.cities[city] }}</h3>
-      <br>
-      <ul>
-        {% for marmita in marmitas %}
-          <li>
-            <div class="row">
-              <div class="col -size-8@sm">
-                {{ card.template(marmita) }}
-              </div>
-            </div>
-          </li>
-          <br>
-          <br>
-        {% endfor %}
-      </ul>
+      <div class="row">
+        <div class="col -size-12@xs">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -size-12@xs">
+          <ul class="card-grid">
+            <h3 class="card-grid__title">{{ app.cities[city] }}</h3>
+            {% for marmita in marmitas %}
+              <li class="card-grid__item">{{ card.template(marmita) }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
     {% endfor %}
   </div>
 {% endblock %}

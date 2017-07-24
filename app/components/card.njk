@@ -1,29 +1,69 @@
 {% macro template (marmita) %}
-  <h4>{{ marmita.name }}</h4>
-  <strong>Preço</strong>: {{ marmita.price }}
-  <br>
-  <strong>Endereço</strong>:
-  {% if marmita.coords %}
-    <a target="_blank" rel="noopener" href="https://www.google.com.br/maps/search/{{ marmita.coords | urlencode }}/">{{ marmita.address }}</a>
-  {% else %}
-    {{ marmita.address }}
-  {% endif %}
-  <br>
-  {% if marmita.telephones %}
-    <strong>Telefone(s)</strong>:
-    {% for telNumber in marmita.telephones %}
-      <a href="tel:{{ telNumber }}">{{ telNumber }}</a>
-      {% if not loop.last %}
-        /
-      {% endif %}
-    {% endfor %}
-    <br>
-  {% endif %}
-  {% if marmita.workingHours %}
-    <strong>Horário</strong>: {{ marmita.workingHours }}
-    <br>
-  {% endif %}
-  <span>
-    <strong>Descrição</strong>: {{ marmita.description }}
-  </span>
+  <div class="card">
+
+    <h4 class="card__title">{{ marmita.name }}</h4>
+
+    <div class="card__row">
+      <div class="card__label">Preço</div>
+      <div class="card__value">
+        <div class="price-table {% if marmita.price.length <
+           2 %} -single {% endif %}">
+          {% for price, desc in marmita.price %}
+            <div class="price-entry">
+              <div class="price-entry__value">
+                {{ price }}
+              </div>
+              {% if desc %}
+                <div class="price-entry__description">
+                  {{ desc }}
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    {% if marmita.coords %}
+      <div class="card__row">
+        <div class="card__label">Endereço</div>
+        <div class="card__value">
+          <a target="_blank" rel="noopener" href="https://www.google.com.br/maps/search/{{ marmita.coords | urlencode }}/">
+            {{ marmita.address }}
+          </a>
+        </div>
+      </div>
+    {% else %}
+      <div class="card__row">
+        <div class="card__label">Endereço</div>
+        <div class="card__value">{{ marmita.address }}</div>
+      </div>
+    {% endif %}
+
+    {% if marmita.telephones %}
+      <div class="card__row">
+        <div class="card__label">Telefone(s)</div>
+        <div class="card__value">
+          {% for telNumber in marmita.telephones %}
+            <a href="tel:{{ telNumber }}">{{ telNumber }}</a>
+            {% if not loop.last %}
+              /
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if marmita.workingHours %}
+      <div class="card__row">
+        <div class="card__label">Horário</div>
+        <div class="card__value">{{ marmita.workingHours }}</div>
+      </div>
+    {% endif %}
+
+    <div class="card__row">
+      <div class="card__label">Descrição</div>
+      <div class="card__value -text">{{ marmita.description }}</div>
+    </div>
+  </div>
 {% endmacro %}
