@@ -34,6 +34,7 @@ bin
 # Assets
 node_modules
 bower_components
+build/
 
 # Arke
 *.pyc
