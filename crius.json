@@ -28,6 +28,13 @@
           "purify": true
         }
       }
+    },
+    "images": {
+      "pattern": "*.{jpg,png,gif,svg,ico}",
+      "directory": "",
+      "assets": {
+        "./": "favicon.ico"
+      }
     }
   }
 }
