@@ -1,5 +1,50 @@
-/* app parameters */
+/*
+ * App parameters
+ * Used for reboot.styl, rolleiflex and rupture.
+ */
 app = {
-	baseFontSize: 16px      // Website's default font-size
-	siteWidth: 1170px       // Website's container largest width
+  /** Website's breakpoints. Used by rolleiflex and rupture */
+  breakpoints: {
+    xs: {
+      minWidth: 0
+      container: 100%
+    }
+
+    sm: {
+      minWidth: 768px
+      container: 740px
+    }
+
+    md: {
+      minWidth: 992px
+      container: 960px
+    }
+
+    lg: {
+      minWidth: 1201px
+      container: 1170px
+    }
+  }
+
+  /** Website base font configuration */
+  base: {
+    fontSize: 16px
+    fontFamily: fonts.main
+    lineHeight: 1
+  }
+
+  /** Headins configuration */
+  headings: {
+    marginBottom: .5rem
+  }
+
+  /** Paragraphs configuration */
+  paragraphs: {
+    marginBottom: 1rem
+  }
+
+  /** Table configuration */
+  table: {
+    cellPadding: .75rem
+  }
 }
