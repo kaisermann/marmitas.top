@@ -9,11 +9,18 @@
     "SP": "São Paulo"
   },
   "marmitas": {
-    "RJ": [{
+    "RJ": [
+      {
+        "name": "Cozinha da vovó (dozão)",
+        "price": [["R$13,00"]],
+        "address": "Pç. Porcurador-Geral de Justiça Hermano Odilon dos Anjos, 13 - Centro",
+        "coords": "-22.907101,-43.169693",
+        "workingHours": "11:00 ~ 13:00",
+        "description": "'Parece tempero de casa' - MOTA, Claudinho. O dozão é 🔝"
+      },
+      {
         "name": "Prana Grill",
-        "price": [
-          ["R$12,00"]
-        ],
+        "price": [["R$12,00"]],
         "address": "R. Visc. de Pirajá, 550 - Ipanema - Loja 321",
         "coords": "-22.9835859,-43.2115579",
         "workingHours": "11:00 ~ 16:00",
@@ -21,28 +28,21 @@
       },
       {
         "name": "Muito Bão",
-        "price": [
-          ["R$12,00", "(P)"],
-          ["R$12,50", "(M)"],
-          ["R$13,00", "(G)"]
-        ],
+        "price": [["R$12,00", "(P)"], ["R$12,50", "(M)"], ["R$13,00", "(G)"]],
         "address": "Delivery - Centro",
         "telephones": ["(21) 2215-8237", "(21) 2502-0993"],
         "description": "Delivery com 5 PFs diferente todo dia. Tem até prato diet. Muito Bão é 🔝"
       },
       {
         "name": "Não tem nome mas é de chineses",
-        "price": [
-          ["R$15,00"]
-        ],
+        "price": [["R$15,00"]],
         "address": "Rua Santa Clara (altura do Nº 118) com Rua Barata Ribeiro - Copacabana",
         "coords": "-22.970239,-43.188143",
         "description": "\"vem uma refeição que me alimentou por 48h (sério).\" - Douglas. Chineses são 🔝"
-      }, {
+      },
+      {
         "name": "Simone",
-        "price": [
-          ["R$10,00"]
-        ],
+        "price": [["R$10,00"]],
         "address": "Rua Barão da Torre com Av. Henrique Dumont - Ipanema",
         "coords": "-22.982628,-43.213194",
         "workingHours": "11:30 ~ 13:00",
@@ -50,48 +50,35 @@
       },
       {
         "name": "Birds Sucos",
-        "price": [
-          ["R$14,00"]
-        ],
+        "price": [["R$14,00"]],
         "address": "Praia de Botafogo, 214 - Botafogo",
         "coords": "-22.942238,-43.179463",
         "description": "PFzeira completo e variado. Birds Sucos são 🔝"
       },
       {
         "name": "Chineses ao lado do Bigbi",
-        "price": [
-          ["R$15,00", "(PF)"],
-          ["R$12,00", "(Yakisoba)"]
-        ],
+        "price": [["R$15,00", "(PF)"], ["R$12,00", "(Yakisoba)"]],
         "address": "Rua Visconde de Ouro Preto 340 - Botafogo",
         "coords": "-22.945952,-43.183247",
         "description": "PF top de 9,90 com as opções do dia ou yakisoba por 12 golpinhos. Mais chineses 🔝"
       },
       {
         "name": "Sopas e Caldos",
-        "price": [
-          ["R$13,00", "(P)"],
-          ["R$15,00", "(M)"],
-          ["R$20,00", "(G)"]
-        ],
+        "price": [["R$13,00", "(P)"], ["R$15,00", "(M)"], ["R$20,00", "(G)"]],
         "address": "Rua Professor Alfredo Gomes com Rua Muniz Barreto - Botafogo",
         "coords": "-22.9748162,-43.2354375",
         "description": "Tamanhos P (já alimenta bem), M e G. Costuma ter 4 opções por dia. De dia tem quentinha, de noite tem sopinha e salgadinhos. Sopas e Caldos é 🔝"
       },
       {
         "name": "Natural e Sabor",
-        "price": [
-          ["R$13,00"]
-        ],
+        "price": [["R$13,00"]],
         "address": "Praia de Botafogo altura do Itaú Cinemas - Botafogo",
         "coords": "-22.944941,-43.182555",
         "description": "A promoção da pizza com açaí 400ml não é marmita, mas alimenta muito. Natural e Sabor é 🔝"
       },
       {
         "name": "Carioca",
-        "price": [
-          ["R$14,00"]
-        ],
+        "price": [["R$14,00"]],
         "address": "Rua Marquês de Abrantes - Flamengo",
         "coords": "-22.937150,-43.177554",
         "workingHours": "11:00 ~ 16:00",
@@ -99,9 +86,7 @@
       },
       {
         "name": "Relish",
-        "price": [
-          ["R$10,00"]
-        ],
+        "price": [["R$10,00"]],
         "address": "Rua Licínio Cardoso - Triagem",
         "coords": "",
         "workingHours": "08:00 ~ 13:00",
@@ -110,10 +95,7 @@
       },
       {
         "name": "Disk Quentinha",
-        "price": [
-          ["R$8,00", "(M)"],
-          ["R$10,00", "(G)"]
-        ],
+        "price": [["R$8,00", "(M)"], ["R$10,00", "(G)"]],
         "address": "Travessa Guimarães Natal, 9. Cardeal Arcoverde - Copacabana",
         "coords": "-22.962907,-43.180736",
         "workingHours": "10:00 ~ 14:00",
@@ -137,9 +119,7 @@
       },
       {
         "name": "Quentinha do Leme",
-        "price": [
-          ["R$10,00"]
-        ],
+        "price": [["R$10,00"]],
         "address": "Rua Gustavo Sampaio 640a - Leme",
         "coords": "-22.963308,-43.171373",
         "workingHours": "11:00 ~ 15:00",
@@ -147,9 +127,7 @@
       },
       {
         "name": "Karen's Marmita",
-        "price": [
-          ["R$12,00"]
-        ],
+        "price": [["R$12,00"]],
         "address": "Av. Armando Lombardi n°800 (em frente ao BRT do Jardim Oceânico) - Barra",
         "coords": "-23.006179,-43.313468",
         "workingHours": "11:00 ~ 15:00",
