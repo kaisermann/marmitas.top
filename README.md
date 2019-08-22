@@ -3,7 +3,7 @@
 ## TODO
 
 - Better readme
-- Better building and tooling
+- Better building and simpler tooling
 
 ## Adding a new place
 
